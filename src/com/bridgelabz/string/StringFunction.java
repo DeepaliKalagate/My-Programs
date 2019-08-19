@@ -38,7 +38,19 @@ public class StringFunction {
 		{
 			System.out.println("Not Palindrome String");
 		}
+		//outputs permutation using recursion
 		
+				System.out.println("Permutations using recursive  are");
+				int max = 0;
+				utility.permute(str1, 0, max);
+				
+				
+				//outputs permutation using iterative
+				
+				System.out.println("Permutations using iterative is");
+				utility.permutations(str1);
+				
+				utility.compareList();
 	
 		 scanner.close();
 
