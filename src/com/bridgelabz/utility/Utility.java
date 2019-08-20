@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.Random;
 
 public class Utility 
 {
@@ -46,12 +47,17 @@ public class Utility
 	
 	static List<String> listRecursive = new ArrayList<String>();
 
-	public static void permute(String str, int low, int high) {
-		if (low == high) {
+	public static void permute(String str, int low, int high) 
+	{
+		if (low == high)
+		{
 			System.out.println(str);
 			listRecursive.add(str);
-		} else {
-			for (int i = low; i <= high; i++) {
+		} 
+		else
+		{
+			for (int i = low; i <= high; i++) 
+			{
 				str = swap(str, low, i);
 				// System.out.println("x="+str);
 				permute(str, low + 1, high);
@@ -68,7 +74,8 @@ public class Utility
 	 * @param j
 	 * @return
 	 */
-	public static String swap(String a, int i, int j) {
+	public static String swap(String a, int i, int j) 
+	{
 		char temp;
 		char[] charArray = a.toCharArray();
 		temp = charArray[i];
@@ -82,7 +89,8 @@ public class Utility
 	 * @param i
 	 * @param j
 	 */
-	private static void swap1(char[] a, int i, int j) {
+	private static void swap1(char[] a, int i, int j) 
+	{
 		char ch = a[i];
 		a[i] = a[j];
 		a[j] = ch;
@@ -90,7 +98,8 @@ public class Utility
 
 	static List<String> listIterative = new ArrayList<String>();
 
-	public static void permutations(String s) {
+	public static void permutations(String s) 
+	{
 		// convert string to a character array (Since String is immutable)
 		char[] chars = s.toCharArray();
 		int[] p = new int[s.length()];
@@ -131,6 +140,8 @@ public class Utility
 		System.out.println("the lists are not equal");	
 		}
 	}
+
+	public Object StdRandom;
 	
 	
 	
@@ -334,4 +345,6 @@ public class Utility
 
 	}
 	
+	
 }
+

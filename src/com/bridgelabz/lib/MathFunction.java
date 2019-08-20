@@ -1,11 +1,11 @@
-package com.bridgelabz.string;
+package com.bridgelabz.lib;
 
 import java.util.Scanner;
 
 import com.bridgelabz.utility.Utility;
 import com.bridgelabz.utility.utilityMath;
 
-public class Math 
+public class MathFunction 
 {
 
 	public static void main(String[] args) 
@@ -20,8 +20,7 @@ public class Math
 		switch (choice) 
 		{
 		case 1:
-			System.out.println(
-					"Enter\na.harmonic number\n" + "b.sin of angle\n" + "c.cosine of angle\n" + "d.binary number");
+			System.out.println("Enter\na.harmonic number\n" + "b.sin of angle\n" + "c.cosine of angle\n" + "d.binary number");
 			char option;
 			option = scanner.next().charAt(0);
 			switch (option)
@@ -86,7 +85,7 @@ public class Math
 			int years=scanner.nextInt();
 			
 			rate =rate* 0.01;
-			System.out.println("Years and FutureValue");
+			System.out.println("Years and FutureValues");
 			
 			for(int i = 1; i <= years; i++) 
 			{
@@ -106,7 +105,7 @@ public class Math
 			int year=scanner.nextInt();
 			
 			rate =rateOfInt * 0.01;
-			System.out.println("Years and PresentValue");
+			System.out.println("Years and PresentValues");
 			
 			for(int i = 1; i <= year; i++) 
 			{
@@ -144,6 +143,33 @@ public class Math
 			break;
 			
 		case 9:
+			System.out.println("Enter number for A");
+			int x1=scanner.nextInt();
+			int y1=scanner.nextInt();
+			System.out.println("Enter number for B: ");
+			int x2=scanner.nextInt();
+			int y2=scanner.nextInt();
+			System.out.println("Enetr number for c: ");
+			int x3=scanner.nextInt();
+			int y3=scanner.nextInt();
+			int ab=(y2-y1)/(x2-x1);
+			int bc=(y3-y2)/(x3-x2);
+			int ac=(y3-y1)/(x3-x1);
+			if(ab==bc)
+			{
+				if(bc==ac)
+				{
+					System.out.println("Colinear");
+				}
+				else
+				{
+					System.out.println("Not Colinear");
+				}
+			}
+			else
+			{
+				System.out.println("Not Colinear");
+			}
 			break;
 		
 		}
