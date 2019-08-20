@@ -139,15 +139,6 @@ public class utilityMath
 		  }
 
 		
-		public static void Stopwatch() 
-		{
-		       double start = System.currentTimeMillis();
-		} 
-		public static double elapsedTime()
-		{
-		    	double start = System.currentTimeMillis();
-		        long now = System.currentTimeMillis();
-		        return (now - start) / 1000.0;
-		 }
+		
 }
 
